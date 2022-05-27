@@ -2,5 +2,9 @@ on: [pull_request]
 
 jobs:
   commitlint:
+    runs-on: ubuntu-latest
     steps:
-      - uses: mfocko/actions/commitlint@conventional-commits
+      - uses: mfocko/actions@conventional-commits
+        with:
+          from: ${{ github.event.before }}
+          to: ${{ github.event.after }}
