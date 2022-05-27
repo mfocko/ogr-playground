@@ -1,0 +1,6 @@
+on: [pull_request]
+
+jobs:
+  commitlint:
+    steps:
+      - uses: mfocko/actions/commitlint@conventional-commits
