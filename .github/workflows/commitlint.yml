@@ -5,3 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: mfocko/actions@conventional-commits
+        with:
+          from: ${{ github.event.base.sha }}
+          to: ${{ github.event.head.sha }}
